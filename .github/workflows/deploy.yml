@@ -1,0 +1,50 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v3
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "lts/*"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build the App
+        run: npm run build
+
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v0.1.7
+        with:
+          host: ${{ secrets.SERVER_IP }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_KEY }}
+          port: 22
+          script: |
+            cd /var/www/ege311-le1
+            git fetch --all
+            git reset --hard origin/main
+            npm install 
+            npm run build 
+            sudo systemctl restart nginx
+
+      - name: Verify Nginx status
+        uses: appleboy/ssh-action@v0.1.7
+        with:
+          host: ${{ secrets.SERVER_IP }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_KEY }}
+          port: 22
+          script: |
+            sudo systemctl status nginx --no-pager
