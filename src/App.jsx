@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import Navbar from "./components/navbar/Navbar";
+import Footer from "./components/footer/Footer";
 
 const App = () => {
   const colors = [
@@ -26,18 +28,24 @@ const App = () => {
   }, [colors]);
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 animate-fadeIn">
-      <h1
-        className={`text-4xl font-extrabold ${colors[colorIndex]} ${hoverColors[colorIndex]} transition duration-300 ease-in-out mb-4 animate-bounce`}
-      >
-        LE 1 - Creative Output
-      </h1>
-      <h2
-        className={`text-2xl font-semibold ${colors[colorIndex]} ${hoverColors[colorIndex]} transition duration-300 ease-in-out animate-pulse`}
-      >
-        Group 3
-      </h2>
-    </div>
+    <>
+      <Navbar />
+
+      <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 animate-fadeIn">
+        <h1
+          className={`text-4xl font-extrabold ${colors[colorIndex]} ${hoverColors[colorIndex]} transition duration-300 ease-in-out mb-4 animate-bounce`}
+        >
+          LE 1 - Creative Output
+        </h1>
+        <h2
+          className={`text-2xl font-semibold ${colors[colorIndex]} ${hoverColors[colorIndex]} transition duration-300 ease-in-out animate-pulse`}
+        >
+          Group 3
+        </h2>
+      </div>
+
+      <Footer />
+    </>
   );
 };
 
