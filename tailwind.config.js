@@ -12,7 +12,7 @@ export default {
         accent: "#414141",
         neutral: {
           white: "#FFFFFF",
-          gray: "#7C7C7C",
+          grey: "#7C7C7C",
         },
       },
       fontFamily: {
