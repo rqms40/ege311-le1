@@ -5,7 +5,7 @@ import ResponsiveNavbar from "./ResponsiveNavbar";
 
 const Navbar = () => {
   return (
-    <nav className="bg-custom-lavender">
+    <nav className="bg-secondary">
       <div className="max-w-screen-2xl mx-auto px-8">
         <div className="w-full h-20 mx-auto flex justify-between items-center">
           <div>

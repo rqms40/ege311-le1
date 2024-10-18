@@ -4,12 +4,16 @@ export default {
   theme: {
     extend: {
       colors: {
-        "custom-lavender": "#E7E0F1",
-        "custom-violet": {
+        primary: {
           DEFAULT: "#543181",
-          dark: "#402B5B",
+          hover: "#402B5B",
         },
-        "custom-dark-grey": "#969696",
+        secondary: "#E7E0F1",
+        accent: "#414141",
+        neutral: {
+          white: "#FFFFFF",
+          gray: "#7C7C7C",
+        },
       },
       fontFamily: {
         inter: ["Inter", "sans-serif"],

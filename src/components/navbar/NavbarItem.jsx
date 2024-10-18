@@ -8,7 +8,7 @@ const NavbarItem = ({ className }) => {
       {navLinksData.map(({ _id, title, link }) => (
         <li
           key={_id}
-          className="text-black text-lg font-medium tracking-wide cursor-pointer hover:text-custom-violet duration-200 "
+          className="text-accent text-lg font-medium tracking-wide cursor-pointer hover:text-primary duration-200 "
         >
           <Link to={link}>{title}</Link>
         </li>
