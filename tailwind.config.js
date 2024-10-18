@@ -5,7 +5,10 @@ export default {
     extend: {
       colors: {
         "custom-lavender": "#E7E0F1",
-        "custom-violet": "#543181",
+        "custom-violet": {
+          DEFAULT: "#543181",
+          dark: "#402B5B",
+        },
         "custom-dark-grey": "#969696",
       },
       fontFamily: {
