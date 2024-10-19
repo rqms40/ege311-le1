@@ -1,12 +1,8 @@
-import logo from "../assets/logo.svg";
-
-export { logo };
-
 export const navLinksData = [
   {
     _id: 1001,
     title: "Home",
-    link: "home",
+    link: "hero",
   },
   {
     _id: 1002,

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { navLinksData } from "../../constants/index";
-import { Link } from "react-router-dom";
+import { Link as LinkScroll } from "react-scroll";
 
 const ResponsiveNavbar = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -22,35 +22,48 @@ const ResponsiveNavbar = () => {
   return (
     <div>
       <span
-        className="text-violet-800 text-2xl font-normal tracking-wide cursor-pointer md:hidden hover:text-violet-500 duration-200"
+        className="text-primary text-xl font-normal tracking-wide cursor-pointer md:hidden hover:text-primary-hover duration-200"
         onClick={() => setShowMenu(!showMenu)}
       >
         <i className="fa-solid fa-bars-staggered"></i>
       </span>
 
-      {showMenu && (
-        <div className="w-full h-full absolute top-0 right-0 bg-violet-950/80">
-          <span
-            className="absolute top-6 left-6 text-white text-2xl font-normal tracking-wide cursor-pointer md:hidden hover:text-violet-800 duration-200"
-            onClick={() => setShowMenu(!showMenu)}
-          >
-            <i className="fa-solid fa-bars-staggered"></i>
-          </span>
+      <div
+        className={`w-full h-screen absolute top-0 right-0 bg-primary opacity-95 transform transition-transform duration-500 ease-in-out ${
+          showMenu ? "translate-x-0" : "translate-x-full"
+        } md:hidden`}
+      >
+        <span
+          className="absolute top-5 left-6 text-white text-xl font-normal tracking-wide cursor-pointer md:hidden hover:text-primary-hover duration-200"
+          onClick={() => setShowMenu(!showMenu)}
+        >
+          <i className="fa-solid fa-bars-staggered"></i>
+        </span>
 
-          <div>
-            <ul className="flex flex-col justify-center items-center gap-6 relative translate-y-3/4">
-              {navLinksData.map(({ _id, title, link }) => (
-                <li
-                  key={_id}
-                  className="text-white font-medium tracking-wide cursor-pointer hover:text-violet-400 duration-200 "
+        <div>
+          <ul className="flex flex-col justify-center items-center gap-6 relative translate-y-3/4">
+            {navLinksData.map(({ _id, title, link }) => (
+              <li
+                key={_id}
+                className="font-medium tracking-wide cursor-pointer"
+              >
+                <LinkScroll
+                  to={link}
+                  smooth={true}
+                  duration={500}
+                  offset={-48}
+                  spy={true}
+                  onClick={() => setShowMenu(false)}
+                  className="cursor-pointer text-white hover:text-violet-400 duration-200"
+                  activeClass="text-violet-400"
                 >
-                  <Link to={link}>{title}</Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+                  {title}
+                </LinkScroll>
+              </li>
+            ))}
+          </ul>
         </div>
-      )}
+      </div>
     </div>
   );
 };
