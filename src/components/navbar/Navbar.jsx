@@ -5,8 +5,8 @@ import ResponsiveNavbar from "./ResponsiveNavbar";
 
 const Navbar = () => {
   return (
-    <nav className="bg-secondary">
-      <div className="max-w-screen-2xl mx-auto px-8">
+    <nav className="bg-secondary sticky top-0 z-50">
+      <div className="max-w-screen-2xl mx-auto px-4 md:px-8">
         <div className="w-full h-20 mx-auto flex justify-between items-center">
           <div>
             <NavbarLogo />
