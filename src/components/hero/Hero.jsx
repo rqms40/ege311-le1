@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <section className="relative" id="hero">
       <HeroBackground backgroundImage={heroBackground} />
-      <div className="relative z-10 min-h-screen flex items-center max-w-screen-2xl mx-auto py-16">
+      <div className="relative z-10 min-h-screen flex items-center max-w-screen-2xl mx-auto py-[8rem]">
         <div className="px-11 md:px-20">
           <h1 className="text-4xl md:text-5xl lg:text-7xl leading-tight md:leading-tight text-accent font-bold max-w-[59.375rem]">
             Biomedical Perspective in Gender and Sexuality
