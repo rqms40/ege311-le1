@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { navLinksData } from "../../constants/index";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-scroll";
 
 const ResponsiveNavbar = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -56,14 +56,19 @@ const ResponsiveNavbar = () => {
               {navLinksData.map(({ _id, title, link }) => (
                 <li
                   key={_id}
-                  className="text-neutral-white font-medium tracking-wide cursor-pointer hover:text-primary-hover duration-200 "
+                  className="text-neutral-white font-medium tracking-wide cursor-pointer hover:text-primary-hover duration-200"
                 >
-                  <NavLink
+                  <Link
                     to={link}
-                    className={({ isActive }) => (isActive ? "active" : "")}
+                    activeClass="active"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                    onClick={() => setShowMenu(false)}
                   >
                     {title}
-                  </NavLink>
+                  </Link>
                 </li>
               ))}
             </ul>

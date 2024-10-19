@@ -1,6 +1,6 @@
 import React from "react";
 import { navLinksData } from "../../constants/index";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-scroll";
 
 const NavbarItem = () => {
   return (
@@ -8,14 +8,18 @@ const NavbarItem = () => {
       {navLinksData.map(({ _id, title, link }) => (
         <li
           key={_id}
-          className="text-accent text-lg font-medium tracking-wide hover:text-primary duration-200 "
+          className="text-accent text-lg font-medium tracking-wide cursor-pointer hover:text-primary duration-200 "
         >
-          <NavLink
+          <Link
             to={link}
-            className={({ isActive }) => (isActive ? "active" : "")}
+            activeClass="active"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
           >
             {title}
-          </NavLink>
+          </Link>
         </li>
       ))}
     </ul>
