@@ -20,8 +20,8 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? "shadow-sm backdrop-blur-sm" : ""
+      className={`fixed top-0 left-0 w-full z-50 backdrop-blur-sm transition-all duration-300 ${
+        scrolled ? "shadow-sm" : ""
       }`}
     >
       <div className="max-w-screen-2xl mx-auto px-8">
