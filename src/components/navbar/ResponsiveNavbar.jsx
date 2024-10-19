@@ -31,7 +31,7 @@ const ResponsiveNavbar = () => {
       <div
         className={`w-full h-screen absolute top-0 right-0 bg-primary opacity-95 transform transition-transform duration-500 ease-in-out ${
           showMenu ? "translate-x-0" : "translate-x-full"
-        } md:hidden`}
+        } md:hidden overflow-scroll scrollbar-hide`}
       >
         <span
           className="absolute top-5 left-6 text-white text-xl font-normal tracking-wide cursor-pointer md:hidden hover:text-primary-hover duration-200"
@@ -45,7 +45,7 @@ const ResponsiveNavbar = () => {
             {navLinksData.map(({ _id, title, link }) => (
               <li
                 key={_id}
-                className="font-medium tracking-wide cursor-pointer"
+                className="font-medium tracking-wide cursor-pointer last:pb-10"
               >
                 <LinkScroll
                   to={link}
