@@ -8,7 +8,7 @@ const Button = ({ className = "", href, onClick, children, px = "px-6" }) => {
 
   useEffect(() => {
     const handleResize = () => {
-      setOffset(window.innerWidth < 640 ? 48 : 80);
+      setOffset(window.innerWidth < 768 ? 48 : 80);
     };
     handleResize();
     window.addEventListener("resize", handleResize);
