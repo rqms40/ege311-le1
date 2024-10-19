@@ -1,23 +1,26 @@
-import React, { useState, useEffect } from "react";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
+import Hero from "./components/hero/Hero";
 
 const App = () => {
   return (
-    <>
+    <main className="overflow-hidden">
       <Navbar />
-
-      <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 text-center">
-        <h1 className="text-4xl font-extrabold text-primary hover:text-primary-hover mb-4">
-          LE 1 - Creative Output
-        </h1>
-        <h2 className="text-2xl font-semibold text-primary hover:text-primary-hover">
-          Group 3
-        </h2>
-      </div>
-
+      <Hero />
+      <section id="reproduction" className="h-screen bg-secondary">
+        <h1>Reproduction</h1>
+      </section>
+      <section id="hygiene" className="h-screen">
+        <h1>Hygiene</h1>
+      </section>
+      <section id="adolescents" className="h-screen bg-secondary">
+        <h1>Adolescents</h1>
+      </section>
+      <section id="about" className="h-screen">
+        <h1>About</h1>
+      </section>
       <Footer />
-    </>
+    </main>
   );
 };
 
