@@ -51,7 +51,7 @@ const ResponsiveNavbar = () => {
                   to={link}
                   smooth={true}
                   duration={500}
-                  offset={-48}
+                  offset={0}
                   spy={true}
                   onClick={() => setShowMenu(false)}
                   className="cursor-pointer text-white hover:text-violet-400 duration-200"

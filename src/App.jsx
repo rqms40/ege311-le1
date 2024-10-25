@@ -2,6 +2,7 @@ import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
 import Hero from "./components/hero/Hero";
 import Hygiene from "./components/hygiene/Hygiene";
+import Adolescents from "./components/adolescents/Adolescents";
 
 const App = () => {
   return (
@@ -15,12 +16,13 @@ const App = () => {
       {/* Hygiene Section */}
       <Hygiene />
 
-      <section id="adolescents" className="h-screen bg-secondary">
-        <h1>Adolescents</h1>
-      </section>
-      <section id="about" className="h-screen">
+      {/* Adolescents Section */}
+      <Adolescents />
+
+      <section id="about" className="h-screen bg-secondary">
         <h1>About</h1>
       </section>
+
       <Footer />
     </main>
   );
