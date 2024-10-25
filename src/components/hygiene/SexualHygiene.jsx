@@ -3,7 +3,7 @@ import { sexualHygieneImage } from "../../assets";
 
 const SexualHygiene = () => {
   return (
-    <div className="h-auto">
+    <div className="h-auto pt-4 md:pt-12">
       <div className="grid grid-cols-1 md:grid-cols-12">
         <div className="justify-self-center pb-4 md:col-span-6 overflow-hidden md:pr-10">
           <img
