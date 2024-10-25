@@ -14,7 +14,7 @@ const NavbarItem = () => {
             to={link}
             smooth={true}
             duration={500}
-            offset={-80}
+            offset={0}
             spy={true}
             activeClass="text-primary-hover"
             className="cursor-pointer hover:text-primary-hover duration-200"
