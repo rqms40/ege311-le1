@@ -86,7 +86,7 @@ const HygienePractice = () => {
         </div>
         <div></div>
         <div className="flex justify-center">
-          <Button px="px-4">View More</Button>
+          <Button>View More</Button>
         </div>
       </div>
       <div></div>
