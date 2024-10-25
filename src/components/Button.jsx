@@ -3,7 +3,7 @@ import React, { useCallback, useEffect, useState } from "react";
 const Button = ({ className = "", href, onClick, children, px = "px-6" }) => {
   const [offset, setOffset] = useState(80);
   const classes =
-    `bg-primary hover:bg-primary-hover text-white text-sm md:text-xl py-4 rounded-[0.625rem] mt-5 ${px} ${className}`.trim();
+    `bg-primary hover:bg-primary-hover text-white text-sm md:text-xl py-2 md:py-4 rounded-[0.625rem] mt-5 ${px} ${className}`.trim();
   const spanClasses = "relative z-10";
 
   useEffect(() => {
