@@ -89,6 +89,10 @@ const HygienePractice = () => {
               />
             ))}
           </div>
+
+          <div className="flex justify-center">
+            <Button>View More</Button>
+          </div>
         </div>
       </div>
     </SubsectionWrapper>

@@ -19,6 +19,10 @@ const Subsection2 = () => {
           spaceBetween={12}
         />
       </div>
+
+      <div className="flex justify-center">
+        <Button>View More</Button>
+      </div>
     </SubsectionWrapper>
   );
 };

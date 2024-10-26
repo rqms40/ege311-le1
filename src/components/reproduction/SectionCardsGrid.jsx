@@ -84,6 +84,10 @@ function SectionCardsGrid() {
             />
           ))}
         </div>
+
+        <div className="flex justify-center">
+          <Button>View More</Button>
+        </div>
       </div>
     </SubsectionWrapper>
   );
