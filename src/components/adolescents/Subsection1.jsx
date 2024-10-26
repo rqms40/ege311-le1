@@ -3,10 +3,7 @@ import { adolescents } from "../../assets";
 
 const Subsection1 = () => {
   return (
-    <SubsectionWrapper
-      id="adolescents"
-      className="pt-20 md:pt-28 px-11 md:px-10"
-    >
+    <SubsectionWrapper className="px-11 md:px-10">
       <div className="flex gap-8 md:gap-12 lg:gap-20 justify-between items-center flex-col md:flex-row-reverse">
         <div className="w-[85%] md:w-[50%] aspect-[4/5] lg:max-w-[31.25rem] lg:max-h-[37.5rem] flex-shrink-0 md:mb-8">
           <img

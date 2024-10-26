@@ -9,6 +9,7 @@ import "swiper/css/pagination";
 import "swiper/css/effect-coverflow";
 
 import { Pagination, EffectCoverflow } from "swiper/modules";
+import SubsectionWrapper from "../SubsectionWrapper";
 
 const HygienePractice = () => {
   const contents = [
@@ -45,52 +46,56 @@ const HygienePractice = () => {
   ];
 
   return (
-    <div className="h-auto">
-      <div className="space-y-3">
-        <h1 className="uppercase text-center text-accent font-bold text-3xl pb-4">
-          practices
-        </h1>
+    <SubsectionWrapper className="py-6 md:py-6 lg:py-20 px-0 md:px-0">
+      <div className="h-auto">
+        <div className="space-y-3">
+          <h1 className="uppercase pb-4 font-bold text-2xl md:text-4xl lg:text-5xl text-center">
+            practices
+          </h1>
 
-        <div className="lg:hidden">
-          <Swiper
-            centeredSlides={true}
-            spaceBetween={10}
-            slidesPerView={1.9}
-            effect={"coverflow"}
-            coverflowEffect={{
-              rotate: 0,
-              stretch: 0,
-              depth: 100,
-              modifier: 2,
-              slideShadows: false,
-            }}
-            modules={[EffectCoverflow]}
-            className="mySwiper"
-          >
+          <div className="lg:hidden">
+            <Swiper
+              centeredSlides={true}
+              spaceBetween={10}
+              slidesPerView={1.9}
+              effect={"coverflow"}
+              coverflowEffect={{
+                rotate: 0,
+                stretch: 0,
+                depth: 100,
+                modifier: 2,
+                slideShadows: false,
+              }}
+              modules={[EffectCoverflow]}
+              className="mySwiper"
+            >
+              {contents.map((content, index) => (
+                <SwiperSlide key={index}>
+                  <Card
+                    title={content.title}
+                    description={content.description}
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+
+          <div className="hidden lg:grid grid-cols-3 gap-7">
             {contents.map((content, index) => (
-              <SwiperSlide key={index}>
-                <Card title={content.title} description={content.description} />
-              </SwiperSlide>
+              <Card
+                key={index}
+                title={content.title}
+                description={content.description}
+              />
             ))}
-          </Swiper>
-        </div>
-
-        <div className="hidden lg:grid grid-cols-3 gap-7">
-          {contents.map((content, index) => (
-            <Card
-              key={index}
-              title={content.title}
-              description={content.description}
-            />
-          ))}
-        </div>
-        <div></div>
-        <div className="flex justify-center">
-          <Button>View More</Button>
+          </div>
+          <div></div>
+          <div className="flex justify-center">
+            <Button>View More</Button>
+          </div>
         </div>
       </div>
-      <div></div>
-    </div>
+    </SubsectionWrapper>
   );
 };
 

@@ -35,6 +35,50 @@ export const navLinksData = [
   },
 ];
 
+export const keyTerms = [
+  {
+    id: 0,
+    title: "Ovulation",
+    description:
+      "Release of a mature egg from the ovary, traveling to the fallopian tube.",
+  },
+  {
+    id: 1,
+    title: "Conception",
+    description: "Sperm meets and joins with an egg in the Fallopian tube.",
+  },
+  {
+    id: 2,
+    title: "Fertilization",
+    description:
+      "Sperm travels to the uterus & fertilizes an egg in the Fallopian tube.	",
+  },
+  {
+    id: 3,
+    title: "Pregnancy",
+    description: "The development of an offspring inside the uterus.",
+  },
+];
+
+export const sexualHealthComponents = [
+  {
+    id: 0,
+    title: "Physical Health",
+    description: "Regular check-ups, STI screenings and vaccination.",
+  },
+  {
+    id: 1,
+    title: "Mental & Emotional",
+    description: "Health, Sexual rights, consent and mental well-being.",
+  },
+  {
+    id: 2,
+    title: "Safe Practices",
+    description:
+      "Contraception, understanding the risks and safe sex practices.",
+  },
+];
+
 export const riskyBehaviors = [
   {
     id: 0,

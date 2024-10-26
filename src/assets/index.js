@@ -5,8 +5,10 @@ import heroBackground from "./hero/hero-background.png";
 
 // Reproduction
 import reproduction from "./reproduction/process-of-reproduction.png";
+import fertlizationIcon from "./reproduction/fertilization-icon.svg";
 
 // Hygiene
+import sexualHealthImage from "./hygiene/sexual-health.png";
 import sexualHygieneImage from "./hygiene/sexual-hygiene.jpg";
 import cardIcon from "./hygiene/cardIcon.svg";
 
@@ -31,7 +33,9 @@ export {
   riskyBehavior4,
   riskyBehavior5,
   riskyBehavior6,
+  sexualHealthImage,
   sexualHygieneImage,
   cardIcon,
   reproduction,
+  fertlizationIcon,
 };
