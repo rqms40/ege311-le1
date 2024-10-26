@@ -20,7 +20,9 @@ function SectionCardsGrid2() {
       </div>
 
       <div className="flex justify-center">
-        <Button>View More</Button>
+        <Button href="https://www.health.gov.au/sti/prevention">
+          View More
+        </Button>
       </div>
     </SubsectionWrapper>
   );

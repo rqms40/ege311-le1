@@ -46,7 +46,13 @@ const Button = ({ className = "", href, onClick, children, px = "px-6" }) => {
   );
 
   const renderLink = () => (
-    <a href={href} className={`${classes} inline-block`} onClick={handleClick}>
+    <a
+      href={href}
+      className={`${classes} inline-block`}
+      onClick={handleClick}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <span className={spanClasses}>{children}</span>
     </a>
   );

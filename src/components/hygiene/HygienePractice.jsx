@@ -91,7 +91,9 @@ const HygienePractice = () => {
           </div>
 
           <div className="flex justify-center">
-            <Button>View More</Button>
+            <Button href="https://www.webmd.com/sex-relationships/ss/slideshow-sexual-hygiene">
+              View More
+            </Button>
           </div>
         </div>
       </div>

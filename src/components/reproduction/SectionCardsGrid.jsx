@@ -86,7 +86,9 @@ function SectionCardsGrid() {
         </div>
 
         <div className="flex justify-center">
-          <Button>View More</Button>
+          <Button href="https://opentextbc.ca/biology/chapter/13-3-human-reproduction/">
+            View More
+          </Button>
         </div>
       </div>
     </SubsectionWrapper>

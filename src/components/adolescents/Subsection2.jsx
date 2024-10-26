@@ -21,7 +21,9 @@ const Subsection2 = () => {
       </div>
 
       <div className="flex justify-center">
-        <Button>View More</Button>
+        <Button href="https://socialmediavictims.org/effects-of-social-media/risky-behavior/">
+          View More
+        </Button>
       </div>
     </SubsectionWrapper>
   );
