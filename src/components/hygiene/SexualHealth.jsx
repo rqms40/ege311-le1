@@ -8,7 +8,7 @@ const SexualHealth = () => {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <div className="flex justify-center items-center px-11 md:px-10">
+    <div className="flex justify-center items-center px-11 md:px-10 pb-10 lg:pb-12">
       <SubsectionWrapper>
         <motion.div
           ref={ref}

@@ -8,7 +8,7 @@ const SexualHygiene = () => {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <SubsectionWrapper className="pt-20 md:pt-24 px-11 md:px-10">
+    <SubsectionWrapper className="pt-4 px-11 md:px-10 pb-10 lg:pb-8">
       <div className="h-auto pt-4 md:pt-12 flex items-center justify-center">
         <motion.div
           ref={ref}
