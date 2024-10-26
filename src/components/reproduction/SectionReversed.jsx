@@ -2,8 +2,8 @@ import SubsectionWrapper from "../SubsectionWrapper";
 
 function SectionReversed() {
   return (
-    <div className="flex justify-center items-center  px-10">
-      <SubsectionWrapper>
+    <div className="flex justify-center items-center px-10">
+      <SubsectionWrapper className="pt-6 md:pt-6 lg:pt-20">
         <div className="flex gap-8 lg:gap-12 xl:gap-20 justify-between items-center flex-col md:flex-row-reverse">
           <div className="w-[85%] md:w-[50%] aspect-[4/5] lg:max-w-[31.25rem] lg:max-h-[37.5rem] flex-shrink-0 flex items-center md:mb-8">
             <iframe

@@ -3,7 +3,7 @@ import SubsectionWrapper from "../SubsectionWrapper";
 
 function Section2() {
   return (
-    <div className="flex justify-center items-center py-24 px-10">
+    <div className="flex justify-center items-center pt-24 px-10">
       <SubsectionWrapper>
         <div className="flex gap-8 lg:gap-12 xl:gap-20 justify-between items-center flex-col md:flex-row">
           <div className="w-[85%] md:w-[50%] aspect-[4/5] lg:max-w-[31.25rem] lg:max-h-[37.5rem] flex-shrink-0 md:mb-8">
