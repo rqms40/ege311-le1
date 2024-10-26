@@ -4,6 +4,7 @@ import logo from "./logo.svg";
 import heroBackground from "./hero/hero-background.png";
 
 // Reproduction
+import reproduction from "./reproduction/process-of-reproduction.png";
 
 // Hygiene
 import sexualHygieneImage from "./hygiene/sexual-hygiene.jpg";
@@ -32,4 +33,5 @@ export {
   riskyBehavior6,
   sexualHygieneImage,
   cardIcon,
+  reproduction,
 };

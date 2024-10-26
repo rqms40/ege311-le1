@@ -3,15 +3,15 @@ import Footer from "./components/footer/Footer";
 import Hero from "./components/hero/Hero";
 import Hygiene from "./components/hygiene/Hygiene";
 import Adolescents from "./components/adolescents/Adolescents";
+import Reproduction from "./components/reproduction/Reproduction";
 
 const App = () => {
   return (
     <main className="overflow-hidden">
       <Navbar />
       <Hero />
-      <section id="reproduction" className="h-screen bg-secondary">
-        <h1>Reproduction</h1>
-      </section>
+
+      <Reproduction></Reproduction>
 
       {/* Hygiene Section */}
       <Hygiene />
