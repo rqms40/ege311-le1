@@ -40,7 +40,10 @@ const CardSlider = ({
         <div className="grid grid-cols-3 gap-8">
           {items.map((item, index) => (
             <div key={item.id} className="flex">
-              <div ref={(el) => (cardRefs.current[index] = el)} className="flex-grow h-full">
+              <div
+                ref={(el) => (cardRefs.current[index] = el)}
+                className="flex-grow h-full"
+              >
                 {renderCard(item)}
               </div>
             </div>
@@ -68,4 +71,3 @@ const CardSlider = ({
 };
 
 export default CardSlider;
-
