@@ -1,5 +1,5 @@
 import React from "react";
-import { logo } from "../../assets";
+import NavbarLogo from "../navbar/NavbarLogo";
 
 const Footer = () => {
   return (
@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="w-full h-20 mx-auto flex justify-between items-center">
           <div>
             <div>
-              <img src={logo} alt="logo" className="w-7 md:w-[2.875rem]" />
+              <NavbarLogo />
             </div>
           </div>
           <div>

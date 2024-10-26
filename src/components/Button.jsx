@@ -1,29 +1,15 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback } from "react";
 
 const Button = ({ className = "", href, onClick, children, px = "px-6" }) => {
-  const [offset, setOffset] = useState(80);
   const classes =
     `bg-primary hover:bg-primary-hover text-white text-sm md:text-xl py-2 md:py-4 rounded-[0.625rem] mt-5 ${px} ${className}`.trim();
   const spanClasses = "relative z-10";
 
-  useEffect(() => {
-    const handleResize = () => {
-      setOffset(window.innerWidth < 768 ? 48 : 80);
-    };
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+  const scrollWithOffset = useCallback((element) => {
+    if (!element) return;
+    const offsetPosition = element.getBoundingClientRect().top + window.scrollY;
+    window.scrollTo({ top: offsetPosition, behavior: "smooth" });
   }, []);
-
-  const scrollWithOffset = useCallback(
-    (element) => {
-      if (!element) return;
-      const offsetPosition =
-        element.getBoundingClientRect().top + window.scrollY - offset;
-      window.scrollTo({ top: offsetPosition, behavior: "smooth" });
-    },
-    [offset]
-  );
 
   const handleClick = useCallback(
     (e) => {
