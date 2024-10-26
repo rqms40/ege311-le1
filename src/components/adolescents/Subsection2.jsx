@@ -15,7 +15,7 @@ const Subsection2 = () => {
       <div className="py-2 md:py-5 lg:py-12">
         <CardSlider
           items={riskyBehaviors}
-          renderCard={(behavior) => <Card {...behavior} />}
+          renderCard={(item) => <Card item={item} />}
           spaceBetween={12}
         />
 
@@ -28,3 +28,4 @@ const Subsection2 = () => {
 };
 
 export default Subsection2;
+
