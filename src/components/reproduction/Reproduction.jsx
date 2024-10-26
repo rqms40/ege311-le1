@@ -9,11 +9,9 @@ function Reproduction() {
   return (
     <div id="reproduction">
       <Section1 />
+      <HighlightBlock heading={"KEY TERMS"} items={keyTerms} />
       {/*Process of Reproduction*/}
       <SectionReversed />
-
-      <HighlightBlock heading={"KEY TERMS"} items={keyTerms} />
-
       {/*Pregnancy*/}
       <SectionCardsGrid />
       {/*Consequences*/}
