@@ -17,10 +17,6 @@ function SectionCardsGrid2() {
           renderCard={(item) => <Card item={item} />}
           spaceBetween={12}
         />
-
-        <div className="flex justify-center lg:mt-8">
-          <Button>View More</Button>
-        </div>
       </div>
     </SubsectionWrapper>
   );
