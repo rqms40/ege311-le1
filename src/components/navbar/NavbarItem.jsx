@@ -16,8 +16,8 @@ const NavbarItem = () => {
             duration={500}
             offset={0}
             spy={true}
-            activeClass="text-primary-hover"
-            className="cursor-pointer hover:text-primary-hover duration-200"
+            activeClass="text-primary"
+            className="cursor-pointer hover:text-primary duration-200"
           >
             {title}
           </LinkScroll>
