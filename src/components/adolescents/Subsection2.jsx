@@ -7,7 +7,7 @@ import CardSlider from "./CardSlider";
 
 const Subsection2 = () => {
   return (
-    <SubsectionWrapper className="py-6 md:py-6 lg:py-20">
+    <SubsectionWrapper className="py-6 md:py-6 lg:py-20 px-0 md:px-0">
       <h1 className="font-bold text-2xl md:text-4xl lg:text-5xl text-center">
         RISKY BEHAVIORS
       </h1>
@@ -28,4 +28,3 @@ const Subsection2 = () => {
 };
 
 export default Subsection2;
-
