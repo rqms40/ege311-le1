@@ -1,6 +1,7 @@
+import React from "react";
+import { motion } from "framer-motion";
 import Button from "../Button";
 import Card from "./Card";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
@@ -47,9 +48,15 @@ function SectionCardsGrid() {
   return (
     <SubsectionWrapper className="h-auto pt-20 md:pt-28 md:px-auto">
       <div className="space-y-5">
-        <h1 className="uppercase text-center text-accent font-bold text-2xl md:text-4xl lg:text-5xl pb-4">
+        <motion.h1
+          className="uppercase text-center text-accent font-bold text-2xl md:text-4xl lg:text-5xl pb-4"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
           consequences
-        </h1>
+        </motion.h1>
 
         <div className="lg:hidden">
           <Swiper
@@ -69,7 +76,17 @@ function SectionCardsGrid() {
           >
             {contents.map((content, index) => (
               <SwiperSlide key={index}>
-                <Card title={content.title} description={content.description} />
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: index * 0.1 }}
+                >
+                  <Card
+                    title={content.title}
+                    description={content.description}
+                  />
+                </motion.div>
               </SwiperSlide>
             ))}
           </Swiper>
@@ -77,19 +94,29 @@ function SectionCardsGrid() {
 
         <div className="hidden lg:grid grid-cols-3 gap-7">
           {contents.map((content, index) => (
-            <Card
+            <motion.div
               key={index}
-              title={content.title}
-              description={content.description}
-            />
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: index * 0.1 }}
+            >
+              <Card title={content.title} description={content.description} />
+            </motion.div>
           ))}
         </div>
 
-        <div className="flex justify-center">
+        <motion.div
+          className="flex justify-center"
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
           <Button href="https://opentextbc.ca/biology/chapter/13-3-human-reproduction/">
             View More
           </Button>
-        </div>
+        </motion.div>
       </div>
     </SubsectionWrapper>
   );

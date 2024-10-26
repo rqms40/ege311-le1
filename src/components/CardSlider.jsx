@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useMediaQuery } from "react-responsive";
+import { motion } from "framer-motion";
 
 const CardSlider = ({
   items,
@@ -39,11 +40,19 @@ const CardSlider = ({
       {isDesktop ? (
         <div className="flex justify-evenly gap-10">
           {items.map((item, index) => (
-            <div key={item.id}>
-              <div ref={(el) => (cardRefs.current[index] = el)}>
-                {renderCard(item)}
-              </div>
-            </div>
+            <motion.div
+              key={item.id}
+              ref={(el) => (cardRefs.current[index] = el)}
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 0.6,
+                ease: "easeOut",
+                delay: index * 0.1,
+              }}
+            >
+              {renderCard(item)}
+            </motion.div>
           ))}
         </div>
       ) : (
@@ -51,13 +60,20 @@ const CardSlider = ({
           <Swiper {...swiperProps}>
             {items.map((item, index) => (
               <SwiperSlide key={item.id} className="!w-[280px] sm:!w-[340px]">
-                <div
+                <motion.div
                   ref={(el) => (cardRefs.current[index] = el)}
                   className="px-2"
                   style={{ height: maxHeight || "auto" }}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{
+                    duration: 0.6,
+                    ease: "easeOut",
+                    delay: index * 0.1,
+                  }}
                 >
                   {renderCard(item)}
-                </div>
+                </motion.div>
               </SwiperSlide>
             ))}
           </Swiper>

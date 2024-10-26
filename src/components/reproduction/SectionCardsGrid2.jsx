@@ -1,4 +1,5 @@
 import { contraceptives } from "../../constants";
+import { motion } from "framer-motion";
 import Card from "../adolescents/Card";
 import CardSlider from "../adolescents/CardSlider";
 import Button from "../Button";
@@ -19,11 +20,17 @@ function SectionCardsGrid2() {
         />
       </div>
 
-      <div className="flex justify-center">
+      <motion.div
+        className="flex justify-center"
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+      >
         <Button href="https://www.health.gov.au/sti/prevention">
           View More
         </Button>
-      </div>
+      </motion.div>
     </SubsectionWrapper>
   );
 }

@@ -1,11 +1,27 @@
 import SubsectionWrapper from "../SubsectionWrapper";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 function SectionReversed() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
   return (
     <div className="flex justify-center items-center px-10">
       <SubsectionWrapper className="pt-6 md:pt-6 lg:pt-20">
-        <div className="flex gap-8 lg:gap-12 xl:gap-20 justify-between items-center flex-col md:flex-row-reverse">
-          <div className="w-[85%] md:w-[50%] aspect-[4/5] lg:max-w-[31.25rem] lg:max-h-[37.5rem] flex-shrink-0 flex items-center md:mb-8">
+        <motion.div
+          ref={ref}
+          className="flex gap-8 lg:gap-12 xl:gap-20 justify-between items-center flex-col md:flex-row-reverse"
+          initial={{ opacity: 0, y: 50 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          <motion.div
+            className="w-[85%] md:w-[50%] aspect-[4/5] lg:max-w-[31.25rem] lg:max-h-[37.5rem] flex-shrink-0 flex items-center md:mb-8"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={isInView ? { opacity: 1, scale: 1 } : {}}
+            transition={{ duration: 0.8, delay: 0.3 }}
+          >
             <iframe
               src="https://www.youtube.com/embed/XEfnq4Q4bfk?si=bLK48QLgJ85C9db0"
               title="YouTube video player"
@@ -15,8 +31,14 @@ function SectionReversed() {
               referrerPolicy="strict-origin-when-cross-origin"
               allowFullScreen
             ></iframe>
-          </div>
-          <div className="max-w-[48rem] px-4">
+          </motion.div>
+
+          <motion.div
+            className="max-w-[48rem] px-4"
+            initial={{ opacity: 0, x: 50 }}
+            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.8, delay: 0.5 }}
+          >
             <h1 className="font-bold text-2xl md:text-4xl lg:text-5xl text-center lg:text-left">
               PREGNANCY
             </h1>
@@ -33,8 +55,8 @@ function SectionReversed() {
               both the mother and baby, ensuring any potential issues are
               addressed early for the best possible outcome.
             </p>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </SubsectionWrapper>
     </div>
   );

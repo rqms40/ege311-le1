@@ -8,17 +8,23 @@ import SectionReversed from "./SectionReversed";
 function Reproduction() {
   return (
     <div id="reproduction">
+      {/*Pregnancy*/}
       <Section1 />
+
+      {/* Key Terms */}
       <HighlightBlock heading={"KEY TERMS"} items={keyTerms} />
+
       {/*Process of Reproduction*/}
       <SectionReversed />
-      {/*Pregnancy*/}
-      <SectionCardsGrid />
+
       {/*Consequences*/}
-      <Section2 />
+      <SectionCardsGrid />
+
       {/*Prevention*/}
-      <SectionCardsGrid2 />
+      <Section2 />
+
       {/*Contraceptives*/}
+      <SectionCardsGrid2 />
     </div>
   );
 }

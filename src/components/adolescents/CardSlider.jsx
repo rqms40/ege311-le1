@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
+import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useMediaQuery } from "react-responsive";
 
@@ -39,14 +40,21 @@ const CardSlider = ({
       {isDesktop ? (
         <div className="grid grid-cols-3 gap-8">
           {items.map((item, index) => (
-            <div key={item.id} className="flex">
+            <motion.div
+              key={item.id}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="flex"
+            >
               <div
                 ref={(el) => (cardRefs.current[index] = el)}
                 className="flex-grow h-full"
               >
                 {renderCard(item)}
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       ) : (
@@ -54,13 +62,17 @@ const CardSlider = ({
           <Swiper {...swiperProps}>
             {items.map((item, index) => (
               <SwiperSlide key={item.id} className="!w-[280px] sm:!w-[340px]">
-                <div
+                <motion.div
                   ref={(el) => (cardRefs.current[index] = el)}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="px-2"
                   style={{ height: maxHeight || "auto" }}
                 >
                   {renderCard(item)}
-                </div>
+                </motion.div>
               </SwiperSlide>
             ))}
           </Swiper>
