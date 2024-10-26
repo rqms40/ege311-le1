@@ -1,8 +1,8 @@
-const HeroBackground = ({ backgroundImage }) => {
+const HeroBackground = () => {
   return (
     <div
       className="absolute inset-0 bg-cover bg-center"
-      style={{ backgroundImage: `url(${backgroundImage})` }}
+      style={{ backgroundImage: `url(/images/hero-background.png)` }}
     ></div>
   );
 };

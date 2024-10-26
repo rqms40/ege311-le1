@@ -12,7 +12,7 @@ const Hero = () => {
         transition={{ duration: 3, ease: "easeInOut" }}
         className="absolute inset-0"
       >
-        <HeroBackground backgroundImage={heroBackground} />
+        <HeroBackground />
       </motion.div>
 
       <div className="relative z-10 min-h-screen flex items-center max-w-screen-2xl mx-auto py-[8rem]">
