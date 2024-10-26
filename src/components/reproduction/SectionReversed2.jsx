@@ -1,6 +1,6 @@
 import SubsectionWrapper from "../SubsectionWrapper";
 
-function SectionReversed() {
+function SectionReversed2() {
   return (
     <div className="flex justify-center items-center  px-10">
       <SubsectionWrapper>
@@ -40,4 +40,4 @@ function SectionReversed() {
   );
 }
 
-export default SectionReversed;
+export default SectionReversed2;

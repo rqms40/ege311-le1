@@ -4,6 +4,7 @@ import Hero from "./components/hero/Hero";
 import Hygiene from "./components/hygiene/Hygiene";
 import Adolescents from "./components/adolescents/Adolescents";
 import Reproduction from "./components/reproduction/Reproduction";
+import About from "./components/about/About";
 
 const App = () => {
   return (
@@ -19,9 +20,7 @@ const App = () => {
       {/* Adolescents Section */}
       <Adolescents />
 
-      <section id="about" className="h-screen bg-secondary">
-        <h1>About</h1>
-      </section>
+      <About />
 
       <Footer />
     </main>

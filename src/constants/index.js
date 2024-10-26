@@ -5,6 +5,18 @@ import {
   riskyBehavior4,
   riskyBehavior5,
   riskyBehavior6,
+  contraceptive1,
+  contraceptive2,
+  contraceptive3,
+  contraceptive4,
+  contraceptive5,
+  contraceptive6,
+  philip,
+  khalid,
+  rona,
+  ezra,
+  alijah,
+  mark,
 } from "../assets";
 
 export const navLinksData = [
@@ -121,5 +133,89 @@ export const riskyBehaviors = [
     description:
       "Transactional sex or sex work, involves exchanging sexual acts for money or goods. This activity may be voluntary or coerced, depending on personal or external circumstances. The practice can carry risks.",
     imageUrl: riskyBehavior6,
+  },
+];
+
+export const contraceptives = [
+  {
+    id: 0,
+    title: "Condoms",
+    description:
+      "A form of barrier contraception used during sexual activity to prevent pregnancy and reduce the risk of sexually transmitted infections (STIs). Widely available, easy to use, and a key component of safer sex practices.",
+    imageUrl: contraceptive1,
+  },
+  {
+    id: 1,
+    title: "Planning",
+    description:
+      "Refers to the practice of controlling the timing and number of children through the use of contraceptive methods and fertility awareness. It enables individuals or couples to make informed decisions.",
+    imageUrl: contraceptive2,
+  },
+  {
+    id: 2,
+    title: "Birth Control Pills",
+    description:
+      "Hormonal contraceptives like pills, patches, and injections prevent pregnancy by stopping ovulation and thickening cervical mucus to block sperm. When used correctly, they are over 90% effective.",
+    imageUrl: contraceptive3,
+  },
+  {
+    id: 3,
+    title: "Birth Control Injection",
+    description:
+      "It is another form of contraceptive. A hormonal method of contraception administered every three months. It is a convenient option for those who prefer not to take a daily pill and offers effective pregnancy prevention.",
+    imageUrl: contraceptive4,
+  },
+  {
+    id: 4,
+    title: "Intrauterine Devices",
+    description:
+      "A copper-coated IUD prevents pregnancy by not allowing the sperm to fertilize the egg. It may also make it harder for a fertilized egg to implant in the uterus. An IUD coated with progestin works in a similar way.",
+    imageUrl: contraceptive5,
+  },
+  {
+    id: 5,
+    title: "Implant",
+    description:
+      "A flexible plastic rod about the size of a matchstick that is placed under the skin of the upper arm. The implant releases a low, steady dose of the hormone progestin. Progestin prevents pregnancy by pausing ovulation.",
+    imageUrl: contraceptive6,
+  },
+];
+
+export const teamMembers = [
+  {
+    id: 0,
+    name: "Khalid Ambobot",
+    role: "Developer",
+    imageUrl: khalid,
+  },
+  {
+    id: 1,
+    name: "Philip Greg Candelario",
+    role: "Developer",
+    imageUrl: philip,
+  },
+  {
+    id: 2,
+    name: "Mark David Prado",
+    role: "Developer",
+    imageUrl: mark,
+  },
+  {
+    id: 3,
+    name: "Alijah Valle",
+    role: "UI/UX Designer",
+    imageUrl: alijah,
+  },
+  {
+    id: 4,
+    name: "Ezra Louis Bazar",
+    role: "UI/UX Designer",
+    imageUrl: ezra,
+  },
+  {
+    id: 5,
+    name: "Rona Arbe Limbago",
+    role: "Content Administrator",
+    imageUrl: rona,
   },
 ];
