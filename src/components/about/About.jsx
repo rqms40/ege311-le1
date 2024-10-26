@@ -1,14 +1,14 @@
 import { teamMembers } from "../../constants";
 import SubsectionWrapper from "../SubsectionWrapper";
-import CardSlider from "../adolescents/CardSlider";
-import AboutCard from "../reproduction/AboutCard";
+import CardSlider from "./CardSlider";
+import AboutCard from "./AboutCard";
 import { motion } from "framer-motion";
 
 const About = () => {
   return (
     <SubsectionWrapper
       id="about"
-      className="pt-16 md:pt-24 lg:pt-28 px-0 md:px-0"
+      className="pt-16 md:pt-24 lg:pt-28 pb-8 px-0 md:px-0"
     >
       <motion.h1
         className="font-bold text-2xl md:text-4xl lg:text-5xl text-center"
