@@ -16,7 +16,7 @@ function SectionCardsGrid() {
     {
       title: "High Blood Pressure",
       description:
-        "Less blood flow to the placenta. Decrease blood flow can cause the fetus to receive less oxygen and fewer nutrients.",
+        "Less blood flow to the placenta. Decrease blood flow can cause the fetus to get less oxygen and fewer nutrients.",
     },
     {
       title: "Infections",
