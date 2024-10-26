@@ -24,16 +24,40 @@ const CardSlider = ({
     ...(isTablet && { initialSlide: 2 }),
   };
 
-  // Ref to hold the card elements
   const cardRefs = useRef([]);
 
-  // Calculate max height of all items in mobile view
   useEffect(() => {
     if (!isDesktop) {
       const heights = cardRefs.current.map((ref) => ref?.offsetHeight || 0);
       setMaxHeight(Math.max(...heights));
     }
   }, [isDesktop, items]);
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 50, rotate: 5, scale: 0.9 },
+    visible: (index) => ({
+      opacity: 1,
+      y: 0,
+      rotate: 0,
+      scale: 1,
+      transition: {
+        duration: 0.8,
+        delay: index * 0.25,
+        ease: "easeOut",
+        type: "spring",
+        stiffness: 150,
+        damping: 20,
+      },
+    }),
+    hover: {
+      scale: 1.1,
+      transition: {
+        type: "spring",
+        stiffness: 300,
+        damping: 5,
+      },
+    },
+  };
 
   return (
     <div className={className}>
@@ -42,15 +66,17 @@ const CardSlider = ({
           {items.map((item, index) => (
             <motion.div
               key={item.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              custom={index}
+              initial="hidden"
+              whileInView="visible"
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="flex"
+              whileHover="hover"
+              variants={cardVariants}
+              className="flex transform transition-transform duration-300 ease-out hover:scale-105"
             >
               <div
                 ref={(el) => (cardRefs.current[index] = el)}
-                className="flex-grow h-full"
+                className="flex-grow h-full rounded-lg overflow-hidden border border-transparent hover:border-opacity-100 transition-all duration-300"
               >
                 {renderCard(item)}
               </div>
@@ -64,11 +90,13 @@ const CardSlider = ({
               <SwiperSlide key={item.id} className="!w-[280px] sm:!w-[340px]">
                 <motion.div
                   ref={(el) => (cardRefs.current[index] = el)}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  custom={index}
+                  initial="hidden"
+                  whileInView="visible"
                   viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="px-2"
+                  whileHover="hover"
+                  variants={cardVariants}
+                  className="px-2 rounded-lg overflow-hidden"
                 >
                   {renderCard(item)}
                 </motion.div>
