@@ -3,12 +3,7 @@ const AboutCard = ({ item }) => {
     <div className="w-full max-w-[350px] mx-auto">
       <div
         key={item.id}
-        className="relative aspect-square bg-white shadow-md overflow-hidden transition-transform duration-300 transform group"
-        style={{
-          borderTopLeftRadius: "3.125rem",
-          borderBottomRightRadius: "3.125rem",
-          borderBottomLeftRadius: "0px",
-        }}
+        className="relative aspect-square bg-white shadow-md overflow-hidden transition-transform duration-300 transform group about-card"
       >
         <img
           src={item.imageUrl}
@@ -16,7 +11,7 @@ const AboutCard = ({ item }) => {
           className="w-full h-full object-cover"
         />
 
-        <div className="absolute inset-0 bg-gradient-to-tr from-primary via-transparent to-transparent opacity-0 group-hover:opacity-80 transition-opacity duration-300" />
+        <div className="absolute inset-0 bg-gradient-to-tr from-primary via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       </div>
 
       <div className="text-center mt-4">
