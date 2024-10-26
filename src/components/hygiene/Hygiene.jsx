@@ -7,7 +7,7 @@ import HighlightBlock from "../HighlightBlock";
 
 const Hygiene = () => {
   return (
-    <section id="hygiene" className="py-16 md:py-24 lg:py-28">
+    <section id="hygiene" className="pt-16 md:pt-24 lg:pt-28">
       <SexualHealth />
       <HighlightBlock heading={"COMPONENTS"} items={sexualHealthComponents} />
       <SexualHygiene />

@@ -13,6 +13,7 @@ function Reproduction() {
       <SectionReversed />
 
       <HighlightBlock heading={"KEY TERMS"} items={keyTerms} />
+
       {/*Pregnancy*/}
       <SectionCardsGrid />
       {/*Consequences*/}
