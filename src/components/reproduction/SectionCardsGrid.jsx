@@ -113,7 +113,7 @@ function SectionCardsGrid() {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <Button href="https://opentextbc.ca/biology/chapter/13-3-human-reproduction/">
+          <Button href="https://www.nichd.nih.gov/health/topics/pregnancy/conditioninfo/complications">
             View More
           </Button>
         </motion.div>
